@@ -1,8 +1,7 @@
-package exercicio10;
-
+package exercicio_09;
 import java.util.Scanner;
 
-public class LeituraUsuario {
+public class LeituraUsuario9 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

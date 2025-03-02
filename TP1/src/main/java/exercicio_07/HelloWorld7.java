@@ -1,9 +1,8 @@
-package exercicio7;
-
+package exercicio_07;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class HelloWorld {
+public class HelloWorld7 {
     public static void main(String[] args) {
         // Data atual
         LocalDate hoje = LocalDate.now();

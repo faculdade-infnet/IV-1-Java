@@ -1,6 +1,6 @@
-package exercicio8;
+package exercicio_08;
 
-public class HelloWorld {
+public class HelloWorld8 {
     public static void main(String[] args) {
         int idade = 35;
         String nome = "Samuel Hermany";

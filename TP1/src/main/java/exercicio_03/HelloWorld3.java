@@ -1,6 +1,6 @@
-package exercicio3;
+package exercicio_03;
 
-public class HelloWorld {
+public class HelloWorld3 {
     public static void main(String[] args) {
 
     }
