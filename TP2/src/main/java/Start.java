@@ -34,14 +34,14 @@ public class Start {
 //        exercicio_06 exercicio06 = new exercicio_06();
 //        exercicio06.Start();
 //
-        exercicio_07 exercicio07 = new exercicio_07();
-        exercicio07.Start();
+//        exercicio_07 exercicio07 = new exercicio_07();
+//        exercicio07.Start();
 //
 //        exercicio_08 exercicio08 = new exercicio_08();
 //        exercicio08.Start();
 //
-//        exercicio_09 exercicio09 = new exercicio_09();
-//        exercicio09.Start();
+        exercicio_09 exercicio09 = new exercicio_09();
+        exercicio09.Start();
 //
 //        exercicio_10 exercicio10 = new exercicio_10();
 //        exercicio10.Start();
