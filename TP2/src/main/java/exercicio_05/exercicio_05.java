@@ -30,6 +30,6 @@ public class exercicio_05 {
         System.out.println("Para a compra de " + formatoBR.format(compra) + " - desconto " + descontoPercentual + "(" + formatoBR.format(desconto) + ")");
         System.out.println("O preço final a ser pago pela sua compra é de " + formatoBR.format((compra - desconto)) + "\n");
 
-
+        sc.close();
     }
 }

@@ -16,8 +16,8 @@ public class Start {
      * Para executar o exercício desejado, basta descomentar a linha correspondente
      */
     public static void main(String[] args) {
-//        exercicio_01 exercicio01 = new exercicio_01();
-//        exercicio01.Start();
+        exercicio_01 exercicio01 = new exercicio_01();
+        exercicio01.Start();
 
 //        exercicio_02 exercicio02 = new exercicio_02();
 //        exercicio02.Start();
@@ -40,8 +40,8 @@ public class Start {
 //        exercicio_08 exercicio08 = new exercicio_08();
 //        exercicio08.Start();
 //
-        exercicio_09 exercicio09 = new exercicio_09();
-        exercicio09.Start();
+//        exercicio_09 exercicio09 = new exercicio_09();
+//        exercicio09.Start();
 //
 //        exercicio_10 exercicio10 = new exercicio_10();
 //        exercicio10.Start();

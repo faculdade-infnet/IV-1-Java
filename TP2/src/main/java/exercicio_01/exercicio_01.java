@@ -29,8 +29,8 @@ public class exercicio_01 {
         System.out.println("Nome do Mãe: " + nomeMae);
 
         System.out.println(nomeMaior
-                ? "Seu nome tem mais letras que o nome do seu Pai ou da sua Mãe."
-                : "Seu nome NÃO tem mais letras que o nome do seu Pai ou da sua Mãe.");
+                ? "Seu nome tem mais letras que o nome do seu Pai ou da sua Mãe.\n"
+                : "Seu nome NÃO tem mais letras que o nome do seu Pai ou da sua Mãe.\n");
 
         sc.close();
     }

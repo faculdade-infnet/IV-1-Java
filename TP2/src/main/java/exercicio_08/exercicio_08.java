@@ -21,7 +21,9 @@ public class exercicio_08 {
 
         // Verificando se os lados podem formar um triângulo
         if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0 ||
-                ladoA + ladoB <= ladoC || ladoA + ladoC <= ladoB || ladoB + ladoC <= ladoA) {
+                ladoA + ladoB <= ladoC ||
+                ladoA + ladoC <= ladoB ||
+                ladoB + ladoC <= ladoA) {
             System.out.println("Os valores informados não formam um triângulo válido.");
         } else {
             String tipoTriangulo = "Escaleno";
@@ -34,5 +36,7 @@ public class exercicio_08 {
 
             System.out.println("Atráves das 3 lados informados do triângulo, podemos afirmar que se trata de um triângulo " + tipoTriangulo);
         }
+
+        sc.close();
     }
 }

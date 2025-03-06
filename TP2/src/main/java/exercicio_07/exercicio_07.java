@@ -22,6 +22,7 @@ public class exercicio_07 {
         System.out.println("Após o desconto de " + (desconto * 100) + "%(" +
                 formatoBR.format(descontoReais) + ") seu salário Líquido é de " + formatoBR.format(salarioBruto - descontoReais));
 
+        sc.close();
     }
 
     private double CalculoDescontoSalarioImposto(double salarioBruto) {

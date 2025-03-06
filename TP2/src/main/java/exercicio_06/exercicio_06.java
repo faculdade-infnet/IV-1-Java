@@ -28,5 +28,7 @@ public class exercicio_06 {
         System.out.println(anoBissexto
                 ? "O Ano de " + ano + " é Bissexto!"
                 : "O Ano de " + ano + " não é Bissexto!");
+
+        sc.close();
     }
 }
