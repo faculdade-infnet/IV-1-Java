@@ -7,7 +7,7 @@ package exercicio_02_a_06;
  */
 public class exercicio_06 {
     public void Start() {
-        System.out.println("########## " + this.getClass().getSimpleName() + ": Adicionando Construtores à Classe 'Produto' ##########\n");
+        System.out.println("\n########## " + this.getClass().getSimpleName() + ": Adicionando Construtores à Classe 'Produto' ##########\n");
 
 
         Produto produto = new Produto("Iphone 8", 3100.20, 100);

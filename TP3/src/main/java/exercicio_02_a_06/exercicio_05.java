@@ -10,7 +10,7 @@ import java.util.Locale;
  */
 public class exercicio_05 {
     public void Start() {
-        System.out.println("########## " + this.getClass().getSimpleName() + ": Criando Métodos de Propriedade (Getters e Setters) ##########\n");
+        System.out.println("\n########## " + this.getClass().getSimpleName() + ": Criando Métodos de Propriedade (Getters e Setters) ##########\n");
 
         System.out.println("Explicação do porque (getters e setters) são úteis no código:");
         System.out.println("1 - Encapsulamento: Usar getters e setters estabelece um padrão consistente que facilita mudanças futuras. Se você precisar adicionar validações ou lógica adicional mais tarde, a interface pública da sua classe permanece a mesma.");

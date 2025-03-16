@@ -7,7 +7,7 @@ package exercicio_02_a_06;
  */
 public class exercicio_04 {
     public void Start() {
-        System.out.println("########## " + this.getClass().getSimpleName() + ": Testando a Classe 'Produto' ##########\n");
+        System.out.println("\n########## " + this.getClass().getSimpleName() + ": Testando a Classe 'Produto' ##########\n");
 
         Produto  produto = new Produto();
         produto.nome = "Iphone 8";

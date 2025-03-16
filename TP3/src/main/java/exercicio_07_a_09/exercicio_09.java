@@ -11,7 +11,7 @@ import java.util.Locale;
  */
 public class exercicio_09 {
     public void Start() {
-        System.out.println("########## " + this.getClass().getSimpleName() + ": Vamos testar nossa classe ##########\n");
+        System.out.println("\n########## " + this.getClass().getSimpleName() + ": Vamos testar nossa classe ##########\n");
 
         Conta conta = new Conta();
         conta.titular = "Ricardo Gomes";

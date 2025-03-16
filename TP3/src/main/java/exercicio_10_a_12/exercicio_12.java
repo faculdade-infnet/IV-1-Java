@@ -6,6 +6,18 @@ package exercicio_10_a_12;
  */
 public class exercicio_12 {
     public void Start() {
+        System.out.println("\n########## " + this.getClass().getSimpleName() + ": Testando as Classes de Figuras ##########\n");
 
+        Circulo circulo = new Circulo();
+        Esfera esfera = new Esfera();
+
+        circulo.raio = 3;
+        esfera.raio = 5;
+
+        String areaCirculo = String.format("%.2f", circulo.CalcularArea());
+        String areaEsfera = String.format("%.2f", esfera.CalcularVolume());
+
+        System.out.println("Área do Círculo para raio(" + circulo.raio + "): " + areaCirculo);
+        System.out.println("Volume da Esfera para raio(" + esfera.raio + "): " + areaEsfera);
     }
 }
