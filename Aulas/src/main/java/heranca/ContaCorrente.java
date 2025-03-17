@@ -1,6 +1,5 @@
 package heranca;
 
-
 public class ContaCorrente extends ContaBancaria {
     private double taxaOperacao;
 
@@ -18,7 +17,7 @@ public class ContaCorrente extends ContaBancaria {
     @Override
     public void sacar(double valor) { //100
         var valorTotal = valor + taxaOperacao; //103
-        var saldo = getSaldo(); //50
+        var saldo = super.getSaldo(); //50
 
         if (valorTotal > 0 && valorTotal <= saldo) {
             super.sacar(valor);
@@ -35,4 +34,18 @@ public class ContaCorrente extends ContaBancaria {
         super.exibirInformacoes();
         System.out.println("Taxa de operação: R$" + taxaOperacao);
     }
+
+    @Override
+    public double calcularTaxaEspecial() {
+        if(getSaldo() > 50000) {
+            return 10.0;
+        }
+        return 5.0;
+    }
+
+    //Não conseguimos herdar metodos final
+//    @Override
+//    public final void inicializarRecursosEspeciais() {
+//
+//    }
 }
