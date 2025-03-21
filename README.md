@@ -4,10 +4,8 @@ Pastas:
 - TP1 - Trabalho Prático 1
 - TP2 - Trabalho Prático 2
 - TP3 - Trabalho Prático 3
-- AT  - Prova Final 
+- AT&nbsp;&nbsp; - Prova Final 
 
 Modo de Uso:
-- Em cada pasta, há um arquivo src>main>java>Start.java, que é o arquivo principal do projeto.
+- No projeto existe um arquivo "src>main>java>Start.java", que é o arquivo principal do projeto.
 - Para executar o código, basta abrir o arquivo Start.java e descomentar o exercício que deseja executar.
-# TP1 - Questões
-![Descrição](TP1/documentos/enunciado_TP1.png)
