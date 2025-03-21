@@ -1,15 +1,20 @@
 package heranca;
 
+import service.StringDemo;
+//import service.poo.StringDemo as String;
+import service.condicional.VerificaSaldo;
+
 import static heranca.OperacaoBancaria.OP_SAQUE;
 
-public class BencoDemo {
+
+public class BancoDemo {
     public static void main(String[] args) {
         //exemplo1();
         //exemplo2();
         OperacaoBancaria op = new OperacaoBancaria(OP_SAQUE, 500.0);
-
-
-
+        StringDemo sd = new StringDemo();
+        service.poo.StringDemo sd2 = new service.poo.StringDemo();
+        VerificaSaldo vs = new VerificaSaldo();
     }
 
     private static void exemplo2() {
