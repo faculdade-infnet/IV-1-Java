@@ -1,8 +1,4 @@
 import exercicio_03.HelloWorld3;
-import exercicio_04.HelloWorld4;
-import exercicio_07.HelloWorld7;
-import exercicio_08.HelloWorld8;
-import exercicio_10.LeituraUsuario10;
 
 
 public class Start {
