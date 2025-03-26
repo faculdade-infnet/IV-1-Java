@@ -7,40 +7,29 @@ public class exercicio_07 {
     public void Start() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Digite a 1° nota do Bimestre: ");
-        Double nota1 = sc.nextDouble();
+        var aluno = new Aluno();
+
+        System.out.println("Informe o Nome do aluno:");
+        aluno.nome = sc.nextLine();
+
+        System.out.println("Informe a Matrícula:");
+        aluno.matricula = sc.nextLine();
+
+        System.out.print("Digite a 1° nota: ");
+        aluno.nota1 = sc.nextDouble();
         sc.nextLine();
 
-        System.out.print("Digite a 2° nota do Bimestre: ");
-        Double nota2 = sc.nextDouble();
+        System.out.print("Digite a 2° nota: ");
+        aluno.nota2 = sc.nextDouble();
         sc.nextLine();
 
-        System.out.print("Digite a 3° nota do Bimestre: ");
-        Double nota3 = sc.nextDouble();
+        System.out.print("Digite a 3° nota: ");
+        aluno.nota3 = sc.nextDouble();
         sc.nextLine();
 
-        System.out.print("Digite a 4° nota do Bimestre: ");
-        Double nota4 = sc.nextDouble();
-        sc.nextLine();
-
-        double media = (nota1 + nota2 + nota3 + nota4) / 4;
-        String resultado = ClassificarNota(media);
-        System.out.println("Sua média final é: " + media + "\nVocê foi " + resultado);
+        String resultado = aluno.verificarAprovacao();
+        System.out.println("O aluno: " + aluno.nome + " | Matrícula:" + aluno.matricula + " está " + resultado + ".");
 
         sc.close();
-    }
-
-    private String ClassificarNota(double nota) {
-        String retorno;
-
-        if (nota <= 5) {
-            retorno = "Reprovado";
-        } else if (nota >= 7) {
-            retorno = "Aprovado";
-        } else {
-            retorno = "Recuperação";
-        }
-
-        return retorno;
     }
 }
