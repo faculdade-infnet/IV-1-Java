@@ -10,26 +10,39 @@ public class exercicio_03 {
         Scanner sc = new Scanner(System.in);
 
         // Define o formato para Real (Brasil)
-        NumberFormat formatoBR = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
-        System.out.println("Informe o valor da compra para verificarmos os desconto:");
-        double compra = sc.nextDouble();
+//        System.out.println("Informe o seu nome:");
+//        String nome = sc.nextLine();
+
+        System.out.println("Informe o seu salário mensal:");
+        double salarioMensalBruto = sc.nextDouble();
         sc.nextLine();
 
-        double desconto = 0.00;
-        String descontoPercentual = "";
+        int meses = 12;
+        double salarioAnualBruto = salarioMensalBruto * meses;
 
-        if (compra > 1000) {
-            desconto = compra * 0.1;
-            descontoPercentual = "10%";
-        } else if (compra >= 500 && compra <= 1000) {
-            desconto = compra * 0.05;
-            descontoPercentual = "5%";
-        }
+        double imposto = CalculoDescontoSalarioImposto(salarioAnualBruto);
+        double salarioLiquido = (salarioAnualBruto - (salarioAnualBruto * imposto) )/meses;
 
-        System.out.println("Para a compra de " + formatoBR.format(compra) + " - desconto " + descontoPercentual + "(" + formatoBR.format(desconto) + ")");
-        System.out.println("O preço final a ser pago pela sua compra é de " + formatoBR.format((compra - desconto)) + "\n");
+        System.out.println("Após o desconto de " + String.format("%.2f",(imposto * 100)) + "% do imposto de renda seu salário líquido mensal é de:");
+        System.out.println(formatoMoeda.format(salarioLiquido));
+        System.out.println("\nObs. considerei 12 meses no cálculo.\n");
 
         sc.close();
+    }
+
+    private double CalculoDescontoSalarioImposto(double salarioAnual) {
+        double desconto = 0;
+
+        if (salarioAnual > 45012.61) {
+            desconto = 0.275;
+        } else if (salarioAnual >= 33919.81) {
+            desconto = 0.15;
+        } else if (salarioAnual >= 22847.77) {
+            desconto = 0.075;
+        }
+
+        return desconto;
     }
 }

@@ -7,16 +7,15 @@ public class exercicio_02 {
     public void Start() {
         Scanner sc = new Scanner(System.in);
 
-//        System.out.println("Informe o seu nome:");
-//        String nome = sc.nextLine();
+        System.out.println("Informe o seu nome:");
+        String nome = sc.nextLine();
 
         System.out.println("Informe uma senha:");
         String senha = sc.nextLine();
 
         boolean confirmacaoSenha = false;
-        char[] caracteres = {'v', 'v'};
 
-
+        // Enquanto a validação não acontrecer, fica no loop
         while (!confirmacaoSenha) {
             StringBuilder errorMensagem = new StringBuilder();
             boolean upperCase = true;
@@ -56,7 +55,7 @@ public class exercicio_02 {
     }
 
     /**
-     * Verifica se é uma Número
+     * Verifica se é um Número
      */
     public boolean VerificarNumero(String senha, StringBuilder errorMensagem) {
         for (char c : senha.toCharArray()) {

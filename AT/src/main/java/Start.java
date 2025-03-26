@@ -19,11 +19,11 @@ public class Start {
 //        var exercicio_01 = new exercicio_01();
 //        exercicio_01.Start();
 
-        var exercicio02 = new exercicio_02();
-        exercicio02.Start();
+//        var exercicio02 = new exercicio_02();
+//        exercicio02.Start();
 
-//        var exercicio03 = new exercicio_03();
-//        exercicio03.Start();
+        var exercicio03 = new exercicio_03();
+        exercicio03.Start();
 //
 //        var exercicio04 = new exercicio_04();
 //        exercicio04.Start();
