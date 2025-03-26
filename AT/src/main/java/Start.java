@@ -37,14 +37,14 @@ public class Start {
 //        var exercicio07 = new exercicio_07();
 //        exercicio07.Start();
 //
-        var exercicio08 = new exercicio_08();
-        exercicio08.Start();
+//        var exercicio08 = new exercicio_08();
+//        exercicio08.Start();
 //
 //        var exercicio09 = new exercicio_09();
 //        exercicio09.Start();
 //
-//        var exercicio10 = new exercicio_10();
-//        exercicio10.Start();
+        var exercicio10 = new exercicio_10();
+        exercicio10.Start();
 //
 //        var exercicio11 = new exercicio_11();
 //        exercicio11.Start();

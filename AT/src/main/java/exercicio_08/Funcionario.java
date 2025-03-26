@@ -4,7 +4,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 public abstract class Funcionario {
-    public String nome;
+    protected String nome;
     public double salarioBase;
     public String cargo;
 
