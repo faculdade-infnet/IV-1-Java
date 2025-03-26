@@ -22,14 +22,14 @@ public class Start {
 //        var exercicio02 = new exercicio_02();
 //        exercicio02.Start();
 
-        var exercicio03 = new exercicio_03();
-        exercicio03.Start();
+//        var exercicio03 = new exercicio_03();
+//        exercicio03.Start();
 //
 //        var exercicio04 = new exercicio_04();
 //        exercicio04.Start();
 //
-//        var exercicio05 = new exercicio_05();
-//        exercicio05.Start();
+        var exercicio05 = new exercicio_05();
+        exercicio05.Start();
 //
 //        var exercicio06 = new exercicio_06();
 //        exercicio06.Start();

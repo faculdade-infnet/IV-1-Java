@@ -5,15 +5,14 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class exercicio_03 {
-    /// Calculadora de Descontos Progressivos
+    /// Calculadora de Impostos
     public void Start() {
         Scanner sc = new Scanner(System.in);
-
         // Define o formato para Real (Brasil)
         NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
-//        System.out.println("Informe o seu nome:");
-//        String nome = sc.nextLine();
+        System.out.println("Informe o seu nome:");
+        String nome = sc.nextLine();
 
         System.out.println("Informe o seu salário mensal:");
         double salarioMensalBruto = sc.nextDouble();
@@ -22,7 +21,7 @@ public class exercicio_03 {
         int meses = 12;
         double salarioAnualBruto = salarioMensalBruto * meses;
 
-        double imposto = CalculoDescontoSalarioImposto(salarioAnualBruto);
+        double imposto = CalculoDescontoSalarioImposto(salarioAnualBruto, 0);
         double salarioLiquido = (salarioAnualBruto - (salarioAnualBruto * imposto) )/meses;
 
         System.out.println("Após o desconto de " + String.format("%.2f",(imposto * 100)) + "% do imposto de renda seu salário líquido mensal é de:");
@@ -32,9 +31,8 @@ public class exercicio_03 {
         sc.close();
     }
 
-    private double CalculoDescontoSalarioImposto(double salarioAnual) {
-        double desconto = 0;
-
+    // Calcula a aliquata de imposto conforme o salário anual
+    private double CalculoDescontoSalarioImposto(double salarioAnual, double desconto) {
         if (salarioAnual > 45012.61) {
             desconto = 0.275;
         } else if (salarioAnual >= 33919.81) {

@@ -3,7 +3,7 @@ package exercicio_02;
 import java.util.Scanner;
 
 public class exercicio_02 {
-    /// Validador de Senha
+    /// Validação de Senha Segura
     public void Start() {
         Scanner sc = new Scanner(System.in);
 
