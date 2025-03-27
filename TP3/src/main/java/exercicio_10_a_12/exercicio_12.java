@@ -14,8 +14,8 @@ public class exercicio_12 {
         circulo.raio = 3;
         esfera.raio = 5;
 
-        String areaCirculo = String.format("%.2f", circulo.CalcularArea());
-        String areaEsfera = String.format("%.2f", esfera.CalcularVolume());
+        String areaCirculo = String.format("%.2f", circulo.calcularArea());
+        String areaEsfera = String.format("%.2f", esfera.calcularVolume());
 
         System.out.println("Área do Círculo para raio(" + circulo.raio + "): " + areaCirculo);
         System.out.println("Volume da Esfera para raio(" + esfera.raio + "): " + areaEsfera);

@@ -14,8 +14,8 @@ public class exercicio_04 {
         produto.preco = 3100.20;
         produto.quantidadeEmEstoque = 100;
 
-        produto.AlterarPreco(2500);
-        produto.AlterarQuantidade(50);
-        produto.ExibirInformacoes();
+        produto.alterarPreco(2500);
+        produto.alterarQuantidade(50);
+        produto.exibirInformacoes();
     }
 }

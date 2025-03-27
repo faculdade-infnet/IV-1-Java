@@ -9,19 +9,19 @@ public class Conta {
 
 
     /// Saca valora da conta
-    public void Saca(double valor) {
+    public void sacar(double valor) {
         if (saldo > 0) {
             saldo -= valor;
         }
     }
 
     /// Deposita valor na conta
-    public void Deposita(double valor) {
+    public void depositar(double valor) {
         saldo += valor;
     }
 
     /// Calcula o Rendimento ta conta
-    public void CalculaRendimento() {
+    public void calcularRendimento() {
         saldo *= 0.1;
     }
 }

@@ -15,7 +15,7 @@ public class exercicio_06 {
         produto.setNome("Iphone 11");
         produto.setPreco(2500);
         produto.setQuantidadeEmEstoque(50);
-        produto.ExibirInformacoes();
+        produto.exibirInformacoes();
 
         System.out.println("\nVantagens do Uso de Construtores:");
         System.out.println("1 - Garantia de estado inicial válido: Ao usar um construtor com parâmetros, garantimos que o objeto é criado já com todos os dados essenciais, sem possíbilidade do estado incompleto ou inválido.");

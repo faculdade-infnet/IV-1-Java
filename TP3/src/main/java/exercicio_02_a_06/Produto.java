@@ -15,15 +15,15 @@ public class Produto {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 
-    public void AlterarPreco(double novoPreco) {
+    public void alterarPreco(double novoPreco) {
         this.preco = novoPreco;
     }
 
-    public void  AlterarQuantidade(int novaQuantidade) {
+    public void alterarQuantidade(int novaQuantidade) {
         this.quantidadeEmEstoque = novaQuantidade;
     }
 
-    public void ExibirInformacoes() {
+    public void exibirInformacoes() {
         System.out.println("Informações do Produto:");
         System.out.println("Nome do Produto: " + nome);
         System.out.println("Preço: " + preco);
