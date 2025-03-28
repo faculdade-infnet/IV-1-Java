@@ -1,5 +1,7 @@
 package objects;
 
+import estacionamento.Veiculo;
+
 import java.util.Objects;
 
 public class Carro {
