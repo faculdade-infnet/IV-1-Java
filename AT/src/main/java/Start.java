@@ -46,10 +46,10 @@ public class Start {
 //        var exercicio10 = new exercicio_10();
 //        exercicio10.Start();
 //
-        var exercicio11 = new exercicio_11();
-        exercicio11.Start();
+//        var exercicio11 = new exercicio_11();
+//        exercicio11.Start();
 //
-//        var exercicio12 = new exercicio_12();
-//        exercicio12.Start();
+        var exercicio12 = new exercicio_12();
+        exercicio12.Start();
     }
 }
