@@ -1,62 +1,80 @@
 package exercicio_11;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class exercicio_11 {
-/// Jogo de Adivinhação
-        public void Start() {
-            Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
 
-            System.out.println("Tente adivinhar o número.");
-            boolean acertou = false;
+    /// Jogo de Adivinhação
+    public void Start() {
 
-            Random random = new Random();
-            // Geração de um número aleatório entre 1 e 100 (inclusive)
-            int numeroAleatorio = random.nextInt(100) + 1;
+        System.out.println("###### Tente acertar os números da loteria: ######");
 
-            while (!acertou) {
-                acertou = VerificaResposta(numeroAleatorio, acertou);
-            }
+        int acertou = 0;
+        List<String> listaNumerosAletorios = new ArrayList<>();
+        List<String> listaTentativas = new ArrayList<>();
 
-            sc.close();
-        }
+        listaNumerosAletorios = gerarNumerosAleatorios(listaNumerosAletorios);
+        listaTentativas = numerosTentativas(listaTentativas);
 
 
-        /**
-         * Verifica se o usuário acertou o número
-         */
-        public boolean VerificaResposta(int numeroAleatorio, boolean acertou) {
-            Scanner sc = new Scanner(System.in);
-
-            System.out.println("Informe um número de 1 a 100 para começarmos:");
-            boolean erro = false;
-            int numero = 0;
-
-            // Verifica se o próximo valor inserido é um número inteiro
-            if (!sc.hasNextInt()) {
-                numero = sc.nextInt();
-                System.out.println("Número inválido! Você deve informar um número inteiro.");
-                erro = true;
-            } else {
-                numero = sc.nextInt();
-
-                if (numero <= 1 || numero >= 100) {
-                    System.out.println("Número inválido! Você deve informar um número de 1 e 100 ");
-                    erro = true;
+        for (int i = 0; i < listaNumerosAletorios.size(); i++) {
+            for (int j = 0; j < listaTentativas.size(); j++) {
+                String n1 = listaNumerosAletorios.get(i);
+                String n2 = listaTentativas.get(j);
+                if (listaNumerosAletorios.get(i).equals(listaTentativas.get(j))) {
+                    acertou++;
                 }
             }
-
-            if (!erro) {
-                if (numero == numeroAleatorio) {
-                    System.out.println("Parabéns, Você acertou!!!\nO Número era " + numeroAleatorio + ".\n");
-                    acertou = true;
-                } else if (numeroAleatorio >= numero)
-                    System.out.println("\nDica: O número que está tentando adivinhar é maior");
-                else if (numeroAleatorio < numero)
-                    System.out.println("\nDica: O número que está tentando adivinhar é menor");
-            }
-
-            return acertou;
         }
+
+        if (acertou > 0)
+            System.out.println("Dos 6 números você acertou " + acertou + "!");
+        else
+            System.out.println("Dos 6 números você não acertou nenhum");
+
+        sc.close();
     }
+
+    /// Armazena 6 tentativas do usuário
+    private List<String> numerosTentativas(List<String> listaTentativas) {
+
+        for (int i = 1; i <= 6; i++) {
+            System.out.println("Informe a " + i + "° de 6 tentantivas com números de 1 a 60:");
+            String input = sc.nextLine();
+            boolean inputValido = false;
+
+            do {
+                try {
+                    int numero = Integer.parseInt(input);
+
+                    if (numero < 1 || numero > 60) {
+                        System.out.println("Número inválido! Você deve informar um número de 1 a 60 ");
+                    } else {
+                        listaTentativas.add(String.valueOf(numero));
+                        inputValido = true;
+                    }
+
+                } catch (Exception e) {
+                    System.out.println("Você deve informar um número");
+                }
+            } while (!inputValido);
+        }
+
+        return listaTentativas;
+    }
+
+    /// Gera 6 números aleatórios
+    private List<String> gerarNumerosAleatorios(List<String> listaNumerosAletorios) {
+        Random random = new Random();
+
+        for (int i = 0; i < 6; i++) {
+            listaNumerosAletorios.add(String.valueOf(random.nextInt(60) + 1));
+        }
+
+        return listaNumerosAletorios;
+    }
+}
