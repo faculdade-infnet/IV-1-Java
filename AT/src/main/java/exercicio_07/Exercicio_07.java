@@ -9,10 +9,10 @@ public class Exercicio_07 {
     public void Start() {
         Aluno aluno = new Aluno();
 
-        System.out.println("Informe o Nome do aluno:");
+        System.out.print("Informe o Nome do aluno: ");
         aluno.nome = sc.nextLine();
 
-        System.out.println("Informe a Matrícula:");
+        System.out.print("Informe a Matrícula: ");
         aluno.matricula = sc.nextLine();
 
         aluno.nota1 = lerNota("Digite a 1° nota: ");

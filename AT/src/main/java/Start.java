@@ -16,9 +16,9 @@ public class Start {
      * Para executar o exercício desejado, basta descomentar a linha correspondente
      */
     public static void main(String[] args) {
-//        var exercicio_01 = new Exercicio_01();
-//        exercicio_01.Start();
-
+        var exercicio_01 = new Exercicio_01();
+        exercicio_01.Start();
+//
 //        var exercicio02 = new Exercicio_02();
 //        exercicio02.Start();
 
@@ -43,8 +43,8 @@ public class Start {
 //        var exercicio09 = new Exercicio_09();
 //        exercicio09.Start();
 //
-        var exercicio10 = new Exercicio_10();
-        exercicio10.Start();
+//        var exercicio10 = new Exercicio_10();
+//        exercicio10.Start();
 //
 //        var exercicio11 = new Exercicio_11();
 //        exercicio11.Start();

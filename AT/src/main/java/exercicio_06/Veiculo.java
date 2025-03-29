@@ -4,9 +4,9 @@ import java.text.MessageFormat;
 
 public class Veiculo {
     double quilometragem;
-    private final String placa;
-    private final String modelo;
-    private final int anoDeFabricacao;
+    private String placa;
+    private String modelo;
+    private int anoDeFabricacao;
 
     /// Construtor
     public Veiculo(String placa, String modelo, int anoDeFabricacao, double quilometragem) {
@@ -19,7 +19,7 @@ public class Veiculo {
     /// Exibe os dados do veículo.
     public void exibirDetalhes() {
         System.out.println("Dados do Veículo:");
-        System.out.println(MessageFormat.format("Placa: {0} | Modelo: {1} | Ano: {2} | Km: {3,number,#.00}", placa, modelo, anoDeFabricacao, quilometragem));
+        System.out.println(MessageFormat.format("Placa: {0} | Modelo: {1} | Ano de Fabricacção:  {2,number,#} | Km: {3,number,#.00}\n", placa, modelo, anoDeFabricacao, quilometragem));
     }
 
 

@@ -13,7 +13,6 @@ public class Aluno {
         return media;
     }
 
-
     /// Verifica se o aluno foi aprovado ou reprovado
     String verificarAprovacao() {
         double media = calcularMedia();

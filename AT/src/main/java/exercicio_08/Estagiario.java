@@ -6,7 +6,6 @@ public class Estagiario  extends Funcionario {
         this.cargo = "Estagiario";
     }
 
-
     /// Desconto de 10% no salário base
     @Override
     public double calcularSalario() {

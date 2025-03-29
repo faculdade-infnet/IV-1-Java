@@ -13,7 +13,6 @@ public abstract class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-
     /**
      * Método abstrato para calcular o salário final
      */

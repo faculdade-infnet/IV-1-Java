@@ -14,11 +14,12 @@ public class Exercicio_04 {
         // Define o formato para Real (Brasil)
         NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
-        System.out.println("Informe o seu nome:");
+        System.out.print("Informe o seu nome: ");
         String nome = sc.nextLine();
 
-        System.out.println("Informe o valor do Empréstimo:");
-        double valorEmprestimo = Double.parseDouble(sc.nextLine().replace(",", "."));
+        System.out.print("Informe o valor do Empréstimo: ");
+        String input = sc.nextLine(); // Lê a linha inteira
+        double valorEmprestimo = Double.parseDouble(input.replace(",", "."));
 
         int numParcelas = getNumParcelas();
 

@@ -7,10 +7,10 @@ public class Exercicio_02 {
     public void Start() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Informe o seu nome:");
+        System.out.print("Informe o seu nome: ");
         String nome = sc.nextLine();
 
-        System.out.println("Informe uma senha:");
+        System.out.print("Informe uma senha: ");
         String senha = sc.nextLine();
 
         // Enquanto a senha não for valida, tenta de novo

@@ -23,9 +23,9 @@ public class Produto {
                     StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND);
 
-            System.out.println("Produto adicionado com sucesso!");
+            System.out.println("Produto adicionado com sucesso!\n");
         } catch (IOException e) {
-            System.out.println("Erro ao adicionar produto");
+            System.out.println("Erro ao adicionar produto\n");
         }
     }
 
