@@ -15,23 +15,7 @@ public class Produto {
     int quantidade;
     double precoUnitario;
 
-    ///  Cria o arquivo compars.txt
-    private Path criarArquivo() {
-        Path arquivo = Path.of(System.getProperty("user.dir")).resolve("compras.txt");
-
-        if (!Files.exists(arquivo)) {
-            try {
-                Files.createFile(arquivo);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        return arquivo;
-    }
-
     public void adicionarProduto(Path arquivo) {
-        //Path arquivo = Path.of(System.getProperty("user.dir")).resolve("compras.txt");
         String produto = nome + " | " + quantidade + " | " + precoUnitario + "\n";
 
         try {

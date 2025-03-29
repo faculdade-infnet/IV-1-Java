@@ -1,8 +1,5 @@
 package exercicio_08;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
 public abstract class Funcionario {
     protected String nome;
     public double salarioBase;

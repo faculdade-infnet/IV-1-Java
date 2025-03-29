@@ -19,7 +19,7 @@ public class Veiculo {
     /// Exibe os dados do veículo.
     public void exibirDetalhes() {
         System.out.println("Dados do Veículo:");
-        System.out.println(MessageFormat.format("Placa: {0} | Modelo: {1} | Ano: {2} | Km: {3,number,#.##}", placa, modelo, anoDeFabricacao, quilometragem));
+        System.out.println(MessageFormat.format("Placa: {0} | Modelo: {1} | Ano: {2} | Km: {3,number,#.00}", placa, modelo, anoDeFabricacao, quilometragem));
     }
 
 

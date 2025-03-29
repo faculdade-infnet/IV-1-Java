@@ -2,12 +2,10 @@ package exercicio_12;
 
 import java.util.Scanner;
 
-public class exercicio_12 {
+public class Exercicio_12 {
     private static final Scanner sc = new Scanner(System.in);
 
     public void Start() {
-        // 2 usuarios
-        // 5 mensagens por usuario
         System.out.print("Digite o nome do primeiro usuário: ");
         String user1 = sc.nextLine();
 
@@ -15,7 +13,7 @@ public class exercicio_12 {
         String user2 = sc.nextLine();
 
         String[] mensagens = armazenarMensagens(new String[10], user1, user2);
-        exbirHistoricoMensagens(mensagens);
+        exibirHistoricoMensagens(mensagens);
 
         System.out.println("\nObrigado por utilizarem o sistema! Boa sorte para vocês! 🚀\n");
     }
@@ -30,7 +28,7 @@ public class exercicio_12 {
             else
                 user = user2;
 
-            System.out.print(user + ", digite sua menagem: ");
+            System.out.print(user + ", digite sua mensagem: ");
             String input = sc.nextLine();
             mensagens[i] = user + ": " + input;
         }
@@ -38,11 +36,11 @@ public class exercicio_12 {
         return mensagens;
     }
 
-    private void exbirHistoricoMensagens(String[] mensagens) {
+    private void exibirHistoricoMensagens(String[] mensagens) {
         System.out.println("\n###### Exibir Historico Mensagens: ######");
 
-        for (String mengagem : mensagens) {
-            System.out.println(mengagem);
+        for (String mensagem : mensagens) {
+            System.out.println(mensagem);
         }
     }
 }

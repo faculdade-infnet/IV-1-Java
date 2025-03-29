@@ -4,9 +4,13 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class exercicio_04 {
+public class Exercicio_04 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static final double TAXA_JUROS = 0.03; // 3% ao mês
+    private static final int PARCELA_MINIMA = 6;
+    private static final int PARCELA_MAXIMA = 48;
+
     public void Start() {
-        Scanner sc = new Scanner(System.in);
         // Define o formato para Real (Brasil)
         NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
@@ -14,13 +18,12 @@ public class exercicio_04 {
         String nome = sc.nextLine();
 
         System.out.println("Informe o valor do Empréstimo:");
-        double valorEmprestimo = sc.nextDouble();
-        sc.nextLine();
+        double valorEmprestimo = Double.parseDouble(sc.nextLine().replace(",", "."));
 
-        int numParcelas = getNumParcelas(0, sc);
+        int numParcelas = getNumParcelas();
 
         // Fórmula dos juros compostos
-        double valorTotal = CalculoMontante(valorEmprestimo, numParcelas);
+        double valorTotal = calculoMontante(valorEmprestimo, numParcelas);
         double parcelaMensal = valorTotal / numParcelas;
 
         System.out.println("Valor total pago: " + formatoMoeda.format(valorTotal));
@@ -30,9 +33,10 @@ public class exercicio_04 {
     }
 
     /// Obtém o número de parcelas
-    private static int getNumParcelas(int numParcelas, Scanner sc) {
+    private static int getNumParcelas() {
+        int numParcelas;
         do {
-            System.out.println("Informe o número de parcelas que deseja para o empréstimo:\nMínimo 6, Máximo 48.");
+            System.out.println("Informe o número de parcelas (Mínimo " + PARCELA_MINIMA + ", Máximo " + PARCELA_MAXIMA + ") que deseja para o empréstimo:\n");
             numParcelas = sc.nextInt();
             sc.nextLine();
         }while (numParcelas < 6 || numParcelas > 48);
@@ -41,10 +45,7 @@ public class exercicio_04 {
     }
 
     /// Calcula o montagem resultante após emprestimo com juros
-    private double CalculoMontante(double valorEmprestimo, int numParcelas) {
-        double taxaJuros = 0.03;
-        double montate = valorEmprestimo * Math.pow((1 + taxaJuros), numParcelas);
-
-        return montate;
+    private double calculoMontante(double valorEmprestimo, int numParcelas) {
+        return valorEmprestimo * Math.pow((1 + TAXA_JUROS), numParcelas);
     }
 }

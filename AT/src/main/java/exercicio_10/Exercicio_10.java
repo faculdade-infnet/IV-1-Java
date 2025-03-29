@@ -1,17 +1,14 @@
 package exercicio_10;
 
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class exercicio_10 {
+public class Exercicio_10 {
     public void Start() {
         Scanner sc = new Scanner(System.in);
         Path arquivo = Path.of(System.getProperty("user.dir")).resolve("compras.txt");
 
-        System.out.println("Cadastre 3 produtos:\n");
-        var produto = new Produto();
+        System.out.println("Cadastre 3 compras:\n");
 
         for (int i = 0; i < 3; i++) {
             var produto1 = new Produto();
